@@ -1,0 +1,7 @@
+{
+  "name": "ITElect1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
