@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Notepad
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let note of notes; let i = index">
+    <ion-item>
+      <ion-label class="ion-text-wrap" (click)="openModal()" id="title">{{ note.text }}</ion-label>
+      <ion-label class="ion-text-wrap" (click)="openModal()" id="des">{{ note.text2 }}</ion-label>
+      <ion-button (click)="edit(i)" color="blue" fill="clear" slot="end">
+        <ion-icon name="pencil" ></ion-icon>
+      </ion-button>
+      <ion-button color="danger" fill="clear" slot="end" (click)="deleteNote(i)">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+  
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addNote()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+  <ion-fab-button href="../home/">LOGOUT</ion-fab-button>
+</ion-fab>
+</ion-content>
