@@ -9,8 +9,8 @@
 <ion-content>
   <ion-list *ngFor="let note of notes; let i = index">
     <ion-item>
-      <ion-label class="ion-text-wrap" (click)="openModal()" id="title">{{ note.text }}</ion-label>
-      <ion-label class="ion-text-wrap" (click)="openModal()" id="des">{{ note.text2 }}</ion-label>
+      <ion-label class="ion-text-wrap"  id="title">{{ note.text }}</ion-label>
+      <ion-label class="ion-text-wrap"  id="des">{{ note.text2 }}</ion-label>
       <ion-button (click)="edit(i)" color="blue" fill="clear" slot="end">
         <ion-icon name="pencil" ></ion-icon>
       </ion-button>
