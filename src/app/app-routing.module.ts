@@ -14,7 +14,11 @@ const routes: Routes = [
   {
     path: 'notepad',
     loadChildren: () => import('./notepad/notepad.module').then( m => m.NotepadPageModule)
+  },  {
+    path: 'edit',
+    loadChildren: () => import('./edit/edit.module').then( m => m.EditPageModule)
   },
+
 ];
 
 @NgModule({
